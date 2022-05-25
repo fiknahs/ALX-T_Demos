@@ -1,11 +1,14 @@
-#imports database adapter for python, psycopg2
+# imports database adapter for python, psycopg2
 import psycopg2
 
-#establish connection to database using psycopg2
+# establish connection to database using psycopg2
+# On Windows OS, provide username and password of postgres user
+# connection = psycopg2.connect("dbname=test user=postgres password=root")
+
 connection = psycopg2.connect('dbname = test')
 
-#cursor is an interface that allows you to start queuing up work and 
-#transactions. 
+# cursor is an interface that allows you to start queuing up work and
+# transactions.
 cursor = connection.cursor()
 
 cursor.execute('''
